@@ -1,13 +1,5 @@
 ## **01.	Rhombus of Stars -** [Solution](https://github.com/elenaborisova/Python-OOP/blob/main/01.%20Defining%20Classes%20-%20Lab/01_rhombus_of_stars.py)
-Create a program that reads a positive integer N as input and prints on the console a rhombus with size n:
-
-*Examples*
-
-|       Input       |      Output       |
-|-------------------|-------------------|
-|1                  |*          |
-|2                  |&nbsp;*<br>*&nbsp;*<br>&nbsp;*                |
-|3                  |&nbsp;&nbsp;*<br>&nbsp;*<br>*&nbsp;*<br>&nbsp;*<br>&nbsp;&nbsp;*                   |
+Create a program that reads a positive integer N as input and prints on the console a rhombus with size n.
 
 
 
