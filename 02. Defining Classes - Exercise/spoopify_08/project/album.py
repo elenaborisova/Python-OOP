@@ -2,9 +2,9 @@ from spoopify_08.project.song import Song
 
 
 class Album:
-    def __init__(self, name: str, *songs):
+    def __init__(self, name: str, *args):
         self.name = name
-        self.songs: list = list(songs)
+        self.songs: list = list(args)
         self.published: bool = False
 
     def add_song(self, song: Song):
