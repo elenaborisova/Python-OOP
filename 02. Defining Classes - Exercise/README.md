@@ -96,9 +96,9 @@ o	If there isn't a pokemon with that name in the collection, return "Pokemon is 
 o	The method returns the information of the trainer with his pokemon in this format:  
 "Pokemon Trainer {trainer_name}  
  Pokemon count {the amount of pokemon caught}  
- - {pokemon_details}  
+ \- {pokemon_details}  
  ...  
- - {pokemon_details}  
+ \- {pokemon_details}  
 "  
 
 *Examples*
