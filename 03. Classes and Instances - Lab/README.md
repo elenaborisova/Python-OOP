@@ -14,7 +14,7 @@ o	Otherwise return "Not enough memory to install {app}"
 |smartphone = Smartphone(100)<br>print(smartphone.install("Facebook", 60))<br>smartphone.power()<br>print(smartphone.install("Facebook", 60))<br>print(smartphone.install("Messenger", 20))<br>print(smartphone.install("Instagram", 40))<br>print(smartphone.status())   |Turn on your phone to install Facebook<br>Installing Facebook<br>Installing Messenger<br>Not enough memory to install Instagram<br>Total apps: 2. Memory left: 20    |
 
 
-## **0## **02.	Vet -** [Solution](https://github.com/elenaborisova/Python-OOP/blob/main/03.%20Classes%20and%20Instances%20-%20Lab/02_vet.py)
+## **02.	Vet -** [Solution](https://github.com/elenaborisova/Python-OOP/blob/main/03.%20Classes%20and%20Instances%20-%20Lab/02_vet.py)
 Create a class called Vet. Upon initialization it should receive a name (string). It should also have an instance attribute called animals (empty list by default). There should also be 2 class attributes: animals (empty list) which will store the total amount of animals for all vets; space (5 by default). You have to create 3 more instance methods  
 -	register_animal(animal_name)  
 o	If there is space in the vet clinic add the animal to both animals lists and return a message: "{name} registered in the clinic"  
