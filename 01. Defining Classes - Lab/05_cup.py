@@ -9,7 +9,6 @@ class Cup:
     def fill(self, milliliters):
         if not self.can_fill(milliliters):
             return
-
         self.quantity += milliliters
 
     def status(self):
