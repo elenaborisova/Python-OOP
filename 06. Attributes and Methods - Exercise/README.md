@@ -2,19 +2,7 @@
 Create a class called PhotoAlbum. Upon initialization it should receive pages (int). It should also have one more attribute: photos (empty matrix). The amount of sub lists must be equal to the number of pages. The class should also have 3 more methods:  
 •	from_photos_count(photos_count: int) – creates a new instance of PhotoAlbum with pages ¼ of the photos count (each page can contain 4 photos)  
 •	add_photo(label:str) – add the photo in the next possible page and slot and return "{label} photo added successfully on page {page_number(starting from 1)} slot {slot_number(starting from 1)}". If there are no free slots left, return "No more free spots"  
-•	display() – return a string representation of each page and the photos in it. Each photo is marked with "[]" and the page separation is made using 11 dashes (-). For example, if we have 1 page and 2 photos:  
------------  
-[] []  
------------  
-
-and if we have 2 empty pages:  
------------  
-
------------  
- 
------------  
-
-*Note:* Be aware that there is an empty line after the last page!
+•	display() – return a string representation of each page and the photos in it. Each photo is marked with "[]" and the page separation is made using 11 dashes (-). 
 
 *Examples*
 
@@ -28,11 +16,11 @@ and if we have 2 empty pages:
 ## **02.	Movie World -** [Solution](https://github.com/elenaborisova/Python-OOP/tree/main/06.%20Attributes%20and%20Methods%20-%20Exercise/movie_world_02/project)
 Class Customer
 The Customer class should receive the following parameters upon initialization: name: str, age: int, id: int. Each customer should also have an attribute called rented_dvds (list with DVD instances; empty upon initialization).   
-Implement the __repr__ method, so it returns the following string: "{id}: {name} of age {age} has {count_rented_dvds} rented DVD's ({dvd_names joined by comma and space})"  
+Implement the \_\_repr\_\_ method, so it returns the following string: "{id}: {name} of age {age} has {count_rented_dvds} rented DVD's ({dvd_names joined by comma and space})"  
 
 Class DVD  
 The DVD class should receive the following parameters upon initialization: name: str, id: int, creation_year: int, creation_month: str, age_restriction: int. Each DVD should also have an attribute called is_rented (False by default)  
-Implement the __repr__ method so it returns the following string: "{id}: {name} ({creation_month} {creation_year}) has age restriction {age_restriction}. Status: {rented/not rented}"  
+Implement the \_\_repr\_\_ method so it returns the following string: "{id}: {name} ({creation_month} {creation_year}) has age restriction {age_restriction}. Status: {rented/not rented}"  
 Create one more method called from_date(id: int, name: str, date: str, age_restriction: int) – it should create a new instance using the provided data. The date will be in format "day.month.year" – all of them numbers.  
 
 Class MovieWorld
@@ -47,7 +35,7 @@ o	If the customer has already rented that dvd return "{customer_name} has alread
 o	If the customer is not allowed to rent the DVD, return "{customer_name} should be at least {dvd_age_restriction} to rent this movie"  
 o	Otherwise, the rent is successful (the dvd is rented and its added to the customer dvds). Return "{customer_name} has successfully rented {dvd_name}"  
 •	return_dvd(customer_id, dvd_id) – if the dvd with that id is in the dvds of the customer, he/she should return the dvd and the method should return the message "{customer_name} has successfully returned {dvd_name}". Otherwise return "{customer_name} does not have that DVD"   
-•	__repr__() – return the string representation of each customer and each dvd on separate lines  
+•	\_\_repr\_\_() – return the string representation of each customer and each dvd on separate lines  
 
 *Examples*
 
@@ -63,12 +51,12 @@ o	Otherwise, the rent is successful (the dvd is rented and its added to the cust
 Class Topic  
 The Topic class should receive the following parameters upon initialization: id: int, topic: str, storage_folder: str. It should have two methods:  
 •	edit(new_topic: str, new_storage_folder: str) – change the topic and the storage folder  
-•	__repr__() – returns a string representation of the topic in the format: "Topic {self.id}: {topic} in {storage_folder}"  
+•	\_\_repr\_\_() – returns a string representation of the topic in the format: "Topic {self.id}: {topic} in {storage_folder}"  
 
 Class Category  
 The Category class should receive the following parameters upon initialization: id: int, name: str. The class should have two methods:  
 •	edit(new_name: str) – edit the name of the category  
-•	__repr__() – returns a string representation of the category in the following format: "Category {id}: {name}"  
+•	\_\_repr\_\_() – returns a string representation of the category in the following format: "Category {id}: {name}"  
 
 Class Document  
 The Document class should receive the following parameters upon initialization: id: int, category_id: int, topic_id: int, file_name: str. The class should also have one more attribute called tags (empty list upon initialization). The class should also have 4 methods:  
@@ -76,7 +64,7 @@ The Document class should receive the following parameters upon initialization: 
 •	add_tag(tag_content: str) – if the tag is not already in the tags list, add it to the tags list  
 •	remove_tag(tag_content:str) – if the tag is in the tags list, delete it  
 •	edit(file_name:str) – change the name of the file to the given one  
-•	__repr__() – returns a string representation of a document in the format: "Document {id}: {file_name}; category {category_id}, topic {topic_id}, tags: {tags joined by comma and space)}"  
+•	\_\_repr\_\_() – returns a string representation of a document in the format: "Document {id}: {file_name}; category {category_id}, topic {topic_id}, tags: {tags joined by comma and space)}"  
 
 Class Storage  
 Upon initialization the class Storage will not receive any parameters. It should have 3 attributes: categories (empty list), topics (empty list), documents (empty list). The class should have the following methods:  
@@ -90,7 +78,7 @@ Upon initialization the class Storage will not receive any parameters. It should
 •	delete_topic(topic_id) – delete the topic with the provided id  
 •	delete_document(document_id) – delete the document with the provided id  
 •	get_document(document_id) – return the document with the provided id  
-•	__repr__() – returns a string representation of each document on separate lines  
+•	\_\_repr\_\_() – returns a string representation of each document on separate lines  
 
 *Examples*
 
@@ -105,28 +93,28 @@ Upon initialization the class Storage will not receive any parameters. It should
 ## **04.	Gym -** [Solution](https://github.com/elenaborisova/Python-OOP/tree/main/06.%20Attributes%20and%20Methods%20-%20Exercise/gym_04/project)
 Class Customer  
 Upon initialization each customer will receive the following parameters: name: str, address: str, email: str. Each customer should also have an id (autoincremented starting from 1)  
-Implement the __repr__ method so it returns the info about the customer in the following format: "Customer <{id}> {name}; Address: {address}; Email: {email}"  
+Implement the \_\_repr\_\_ method so it returns the info about the customer in the following format: "Customer <{id}> {name}; Address: {address}; Email: {email}"  
 Create a static method called get_next_id which returns the id that will be given to the next customer  
 
 Class Equipment  
 Upon initialization the class will receive the following parameters: name: str. Each equipment should also have an id (autoincremented starting from 1)  
-Implement the __repr__ method so it returns the info about the equipment in the following format: "Equipment <{id}> {name}"  
+Implement the \_\_repr\_\_ method so it returns the info about the equipment in the following format: "Equipment <{id}> {name}"  
 Create a static method called get_next_id which returns the id that will be given to the next equipment  
 
 Class ExercisePlan  
 Upon initialization the class will receive the following parameters: trainer_id: int, equipment_id: int, duration: int (in minutes). Each plan should also have an id (autoincremented starting from 1). Create the following methods:  
 •	from_hours(trainer_id:int, equipment_id:int, hours:int) – creates new instance using the provided information  
 •	get_next_id() – static method that returns the id that will be given to the next plan  
-•	__repr__() – returns the information about the plan in the following format: "Plan <{id}> with duration {duration} minutes"  
+•	\_\_repr\_\_() – returns the information about the plan in the following format: "Plan <{id}> with duration {duration} minutes"  
 
 Class Subscription  
 Upon initialization the class will receive the following parameters: date:str, customer_id: int, trainer_id: int, exercise_id: int. The class should also have an id (autoincremented starting from 1).  
-Implement the __repr__ method so it returns the info about the subscription in the following format: "Subscription <{id}> on {date}"  
+Implement the \_\_repr\_\_ method so it returns the info about the subscription in the following format: "Subscription <{id}> on {date}"  
 Create a static method called get_next_id which returns the id that will be given to the next subscription  
 
 Class Trainer  
 Upon initialization the class will receive the following parameters: name:str. The class should also have an id (autoincremented starting from 1).  
-Implement the __repr__ method so it returns the info about the trainer in the following format: "Trainer <{self.id}> {self.name}"  
+Implement the \_\_repr\_\_ method so it returns the info about the trainer in the following format: "Trainer <{self.id}> {self.name}"  
 Create a static method called get_next_id which returns the id that will be given to the next trainer  
 
 Class Gym  
