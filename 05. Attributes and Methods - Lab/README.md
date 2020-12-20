@@ -8,7 +8,7 @@ Create a class called Store. Upon initialization it should receive a name (str),
 *Examples*
 
 |       Test Code       |      Output       |
-|----------------    ---|-------------------|
+|-----------------------|-------------------|
 |first_store = Store("First store", "Fruit and Veg", 20)<br>second_store = Store.from_size("Second store", "Clothes", 500)<br><br>print(first_store)<br>print(second_store)<br><br>print(first_store.add_item("potato"))<br>print(second_store.add_item("jeans"))<br>print(first_store.remove_item("tomatoes", 1))<br>print(second_store.remove_item("jeans", 1))         |First store of type Fruit and Veg with capacity 20<br>Second store of type Clothes with capacity 250<br>potato added to the store<br>jeans added to the store<br>Cannot remove 1 tomatoes<br>1 jeans removed from the store          |
 
 
@@ -22,7 +22,7 @@ Create a class called Integer. Upon initialization it should receive a single pa
 *Examples*
 
 |       Test Code       |      Output       |
-|----------------    ---|-------------------|
+|-----------------------|-------------------|
 |first_num = Integer(10)<br>second_num = Integer.from_roman("IV")<br><br>print(Integer.from_float("2.6"))<br>print(Integer.from_string(2.6))<br>print(first_num.add(second_num))          |value is not a float<br>wrong type<br>14          |
 
 
@@ -37,7 +37,7 @@ Create a class called Calculator that has the following static methods:
 *Examples*
 
 |       Test Code       |      Output       |
-|----------------    ---|-------------------|
+|-----------------------|-------------------|
 |print(Calculator.add(5, 10, 4))<br>print(Calculator.multiply(1, 2, 3, 5))<br>print(Calculator.divide(100, 2))<br>print(Calculator.subtract(90, 20, -50, 43, 7))          |19<br>30<br>50.0<br>70          |
 
 
@@ -61,7 +61,7 @@ Taken rooms: {numbers of all taken rooms separated by comma and space}
 *Examples*
 
 |       Test Code       |      Output       |
-|----------------    ---|-------------------|
+|-----------------------|-------------------|
 |from project.hotel import Hotel<br>from project.room import Room<br><br>hotel = Hotel.from_stars(5)<br><br>first_room = Room(1, 3)<br>second_room = Room(2, 2)<br>third_room = Room(3, 1)<br><br>hotel.add_room(first_room)<br>hotel.add_room(second_room)<br>hotel.add_room(third_room)<br><br>hotel.take_room(1, 4)<br>hotel.take_room(1, 2)<br>hotel.take_room(3, 1)<br>hotel.take_room(3, 1)<br><br>hotel.print_status()         |Hotel 5 stars Hotel has 3 total guests<br>Free rooms: 2<br>Taken rooms: 1, 3          |
 
 
