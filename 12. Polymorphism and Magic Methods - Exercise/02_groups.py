@@ -10,10 +10,13 @@ class Person:
         self.id = next(Person.new_id)
 
     def __add__(self, other):
-        return Person(self.name, other.surname)
+        return f"{self.name} {other.surname}"
 
     def __repr__(self):
         return f"Person {self.id}: {self.name} {self.surname}"
+
+    def __str__(self):
+        return f"{self.name} {self.surname}"
 
 
 class Group:
@@ -27,8 +30,11 @@ class Group:
     def __add__(self, other):
         return self.people + other.people
 
+    def __getitem__(self, index):
+        return self.people[index]
+
     def __repr__(self):
-        members = ", ".join(person.name + " " + person.surname for person in self.people)
+        members = ", ".join(str(person) for person in self.people)
         return f"Group {self.name} with members {members}"
 
 
