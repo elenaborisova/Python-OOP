@@ -70,8 +70,6 @@ class. The subclasses should implement the method, so it returns the count of se
                 elif isinstance(robot, Chappie):
                     print(robot.chappie_senzors_count())
 
-        if you need to check the instance, then the Liskov Substitution principle is not applied !!!
-
 
         robots = [Android('Robocop'), Chappie('XIX')]
         count_robot_senzors(robots)
@@ -154,7 +152,7 @@ creating some abstractions and inject them wherever they are needed.
 
         class Printer:
             def get_book(self, book: Book):
-                formatter = Formatter()   # This is a violation of Dependency Inversion
+                formatter = Formatter()
                 formatted_book = formatter.format(book)
                 return formatted_book
 
