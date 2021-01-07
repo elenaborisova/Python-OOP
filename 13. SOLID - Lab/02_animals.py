@@ -2,32 +2,29 @@ from abc import ABC, abstractmethod
 
 
 class Animal(ABC):
-    def __init__(self):
-        pass
-
     @abstractmethod
     def make_sound(self):
         pass
 
 
 class Cat(Animal):
-    def __init__(self):
-        super().__init__()
-        self.sound = "meow"
-
     def make_sound(self):
-        return self.sound
+        return "meow"
 
 
 class Dog(Animal):
-    def __init__(self):
-        super().__init__()
-        self.sound = "woof-woof"
-
     def make_sound(self):
-        return self.sound + " showing teeth"
+        return "woof-woof"
 
 
-animals = [Dog(), Cat()]
-for a in animals:
-    print(a.make_sound())
+class Chicken(Animal):
+    def make_sound(self):
+        return "chick-chirick"
+
+
+def animal_sound(animals: list):
+    for animal in animals:
+        print(animal.make_sound())
+
+
+animals = [Cat(), Dog(), Chicken()]
