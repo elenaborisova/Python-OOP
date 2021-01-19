@@ -1,5 +1,5 @@
 ## **01.	Take Skip -** [Solution](https://github.com/elenaborisova/Python-OOP/blob/main/16.%20Iterators%20and%20Generators%20-%20Exercise/01_take_skip.py)
-Create a class called take_skip. Upon initialization it should receive a step (number) and a count (number). Implement the /_/_iter/_/_ and /_/_next/_/_ functions. The iterator should return the count numbers (starting from 0) with the given step. For more clarification, see the examples:
+Create a class called take_skip. Upon initialization it should receive a step (number) and a count (number). Implement the \_\_iter\_\_ and \_\_next\_\_ functions. The iterator should return the count numbers (starting from 0) with the given step. For more clarification, see the examples:
 
 *Examples*
 
