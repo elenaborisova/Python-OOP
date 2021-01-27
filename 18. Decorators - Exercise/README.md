@@ -36,8 +36,8 @@ Create three decorators: make_bold, make_italic, make_underline, which will have
 
 |       Test Code       |      Output       |
 |-----------------------|-------------------|
-|@make_bold<br>@make_italic<br>@make_underline<br>def greet(name):<br><pre>    return f"Hello, {name}"<pre><br><br>print(greet("Peter"))          |\<b>\<i>\<u>Hello, Peter</u></i></b>          |
-|@make_bold<br>@make_italic<br>@make_underline<br>def greet_all(*args):<br><pre>    return f"Hello, {', '.join(args)}"</pre><br><br>print(greet_all("Peter", "George"))  |<b><i><u>Hello, Peter, George</u></i></b> |
+|@make_bold<br>@make_italic<br>@make_underline<br>def greet(name):<br><pre>    return f"Hello, {name}"<pre><br><br>print(greet("Peter"))          |\<b>\<i>\<u>Hello, Peter\</u>\</i>\</b>          |
+|@make_bold<br>@make_italic<br>@make_underline<br>def greet_all(*args):<br><pre>    return f"Hello, {', '.join(args)}"</pre><br><br>print(greet_all("Peter", "George"))  |\<b>\<i>\<u>Hello, Peter, George\</u>\</i>\</b> |
 
 
 
