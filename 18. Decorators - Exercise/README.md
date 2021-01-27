@@ -21,7 +21,7 @@ Create a decorator function called even_parameters. It should check if all param
 |       Test Code       |      Output       |
 |-----------------------|-------------------|
 |@even_parameters<br>def add(a, b):<br><pre>    return a + b</pre><br><br>print(add(2, 4))<br>print(add("Peter", 1))   |6<br>Please use only even numbers!         |
-|@even_parameters<br>def multiply(*nums):<br><pre>    result = 1<br>    for num in nums:<br>        result *= num<br>    return result</pre><br><br>print(multiply(2, 4, 6, 8))<br>print(multiply(2, 4, 9, 8)) |384>br>Please use only even numbers! |
+|@even_parameters<br>def multiply(*nums):<br><pre>    result = 1<br>    for num in nums:<br>        result *= num<br>    return result</pre><br><br>print(multiply(2, 4, 6, 8))<br>print(multiply(2, 4, 9, 8)) |384<br>Please use only even numbers! |
 
 
 
@@ -36,7 +36,7 @@ Create three decorators: make_bold, make_italic, make_underline, which will have
 
 |       Test Code       |      Output       |
 |-----------------------|-------------------|
-|@make_bold<br>@make_italic<br>@make_underline<br>def greet(name):<br><pre>    return f"Hello, {name}"<pre><br><br>print(greet("Peter"))          |<b><i><u>Hello, Peter</u></i></b>          |
+|@make_bold<br>@make_italic<br>@make_underline<br>def greet(name):<br><pre>    return f"Hello, {name}"<pre><br><br>print(greet("Peter"))          |\<b>\<i>\<u>Hello, Peter</u></i></b>          |
 |@make_bold<br>@make_italic<br>@make_underline<br>def greet_all(*args):<br><pre>    return f"Hello, {', '.join(args)}"</pre><br><br>print(greet_all("Peter", "George"))  |<b><i><u>Hello, Peter, George</u></i></b> |
 
 
