@@ -1,11 +1,11 @@
-class cache:
-    def __init__(self, func):
-        self.func = func
-        self.log = {}
+def cache(func):
+    def wrapper(n):
+        result = func(n)
+        wrapper.log[n] = result
+        return result
 
-    def __call__(self, n):
-        self.log[n] = self.func(n)
-        return n
+    wrapper.log = {}
+    return wrapper
 
 
 @cache

@@ -1,11 +1,11 @@
-from time import perf_counter
+from timeit import default_timer as timer
 
 
 def exec_time(func):
-    def wrapper(*args, **kwargs):
-        start_time = perf_counter()
-        func(*args, **kwargs)
-        end_time = perf_counter()
+    def wrapper(*args):
+        start_time = timer()
+        func(*args)
+        end_time = timer()
         return end_time - start_time
     return wrapper
 
@@ -26,6 +26,6 @@ def concatenate(strings):
     return result
 
 
-print(loop(1, 10000000))
-print(concatenate(['a' for i in range(10000000)]))
+print(loop(1, 10))
+print(concatenate(['a' for i in range(10)]))
 
