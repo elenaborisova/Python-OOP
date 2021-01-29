@@ -5,10 +5,10 @@ from test_person.person import Person
 
 class TestPerson(TestCase):
     @classmethod
-    def setUpClass(cls) -> None:  # executes once for the whole class
+    def setUpClass(cls) -> None:
         print('Executing setUpClass')
 
-    def setUp(self) -> None:  # executes before every test
+    def setUp(self) -> None:
         print('Executing')
 
     def test_valid_name_and_valid_age_should_return_correct_greeting(self):
