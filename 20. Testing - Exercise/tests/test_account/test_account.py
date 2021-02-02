@@ -1,5 +1,6 @@
 import unittest
 from account import Account
+import types
 
 
 class TestAccount(unittest.TestCase):
@@ -12,6 +13,9 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(self.account.balance, 100)
         self.account.add_transaction(50)
         self.assertEqual(self.account.balance, 150)
+
+    def test_accountValidateTransaction_isStatic(self):
+        self.assertTrue(isinstance(self.account.validate_transaction, types.FunctionType))
 
     def test_accountValidateTransaction_whenMoreThanZero_shouldAddTransactionAndReturnBalance(self):
         actual = Account.validate_transaction(self.account, 50)
@@ -76,9 +80,49 @@ class TestAccount(unittest.TestCase):
         self.account.add_transaction(100)
         self.account.add_transaction(150)
 
-        actual = reversed(self.account)
+        actual = list(reversed(self.account))
         expected = [150, 100, 50]
         self.assertEqual(actual, expected)
 
+    def test_accountGreaterThan_whenBalanceIsGreater_shouldReturnTrue(self):
+        account2 = Account('Maria', 200)
+
+        self.assertGreater(account2, self.account)
+
+    def test_accountLessThan_whenBalanceIsLess_shouldReturnTrue(self):
+        account2 = Account('Maria', 200)
+
+        self.assertLess(self.account, account2)
+
+    def test_accountGreaterThanOrEqualTo_whenBalanceIsGreaterOrEqual_shouldReturnTrue(self):
+        account2 = Account('Maria', 200)
+
+        self.assertGreaterEqual(account2, self.account)
+
+    def test_accountLessThanOrEqualTo_whenBalanceIsLessOrEqual_shouldReturnTrue(self):
+        account2 = Account('Maria', 200)
+
+        self.assertLessEqual(self.account, account2)
+
+    def test_accountEqual_whenBalanceIsEqual_shouldReturnTrue(self):
+        account2 = Account('Maria', 100)
+
+        self.assertEqual(self.account, account2)
+
+    def test_accountNotEqual_whenBalanceIsNotEqual_ShouldReturnTrue(self):
+        account2 = Account('Maria', 200)
+
+        self.assertNotEqual(self.account, account2)
+
+    def test_accountAdd_shouldCreateNewAccountAndAddTransactions(self):
+        account2 = Account('Maria', 100)
+        self.account.add_transaction(50)
+        account2.add_transaction(50)
+
+        new_account = self.account + account2
+        self.assertEqual(str(new_account), 'Account of Elena&Maria with starting amount: 200')
+        self.assertEqual(new_account._transactions, [50, 50])
 
 
+if __name__ == '__main__':
+    unittest.main()
