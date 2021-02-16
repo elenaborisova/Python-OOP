@@ -39,8 +39,11 @@ class CustomList:
         return self.__data
 
     def insert(self, index, value):
-        self.__data = self.__data[:index] + [value] + self.__data[index:]
-        return self.__data
+        try:
+            self.__data = self.__data[:index] + [value] + self.__data[index:]
+            return self.__data
+        except TypeError as ex:
+            raise CustomListTypeException('Index should be of type integer!')
 
     def pop(self):
         value_to_remove = self.__data[-1]
