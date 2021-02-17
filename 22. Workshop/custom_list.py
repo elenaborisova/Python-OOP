@@ -46,9 +46,12 @@ class CustomList:
             raise CustomListTypeException('Index should be of type integer!')
 
     def pop(self):
-        value_to_remove = self.__data[-1]
-        del self.__data[-1]
-        return value_to_remove
+        try:
+            value_to_remove = self.__data[-1]
+            del self.__data[-1]
+            return value_to_remove
+        except IndexError as ex:
+            raise CustomListIndexException('The list is empty.')
 
     def clear(self):
         self.__data = []
