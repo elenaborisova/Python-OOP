@@ -3,4 +3,9 @@ from unittest import TestCase
 
 class TestCaseBase(TestCase):
     def assertEmpty(self, iterable):
-        return self.assertEqual([], list(iterable))
+        if type(iterable) == dict:
+            return self.assertDictEqual({}, dict(iterable))
+        elif type(iterable) == set:
+            return self.assertSetEqual(set(), set(iterable))
+
+        return self.assertListEqual([], list(iterable))
