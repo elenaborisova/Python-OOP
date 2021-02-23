@@ -14,7 +14,7 @@ class Everland:
         for room in self.rooms:
             total_consumption += room.expenses + room.room_cost
 
-        return f'Monthly consumption: {total_consumption}$.'
+        return f'Monthly consumptions: {total_consumption:.2f}$.'
 
     def pay(self):
         result = ''
@@ -23,9 +23,9 @@ class Everland:
             if room.budget >= room.expenses:
                 total_expenses = room.expenses + room.room_cost
                 new_budget = room.budget - total_expenses
-                room.budget = new_budget
                 result += f'{room.family_name} paid {total_expenses:.2f}$ ' \
                           f'and have {room.budget:.2f}$ left.\n'
+                room.budget = new_budget
             else:
                 result += f'{room.family_name} does not have enough budget and must leave the hotel.\n'
                 self.rooms.remove(room)
