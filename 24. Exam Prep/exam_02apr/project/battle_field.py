@@ -1,5 +1,5 @@
-from project.player.beginner import Beginner
-from project.player.player import Player
+from exam_02apr.project.player.beginner import Beginner
+from exam_02apr.project.player.player import Player
 
 
 class BattleField:

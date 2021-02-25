@@ -1,4 +1,4 @@
-from project.player.player import Player
+from exam_02apr.project.player.player import Player
 
 
 class Advanced(Player):

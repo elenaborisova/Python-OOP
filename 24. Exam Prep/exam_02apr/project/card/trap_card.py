@@ -1,4 +1,4 @@
-from project.card.card import Card
+from exam_02apr.project.card.card import Card
 
 
 class TrapCard(Card):

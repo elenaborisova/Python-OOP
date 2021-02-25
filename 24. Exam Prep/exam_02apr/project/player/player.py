@@ -1,5 +1,5 @@
 from abc import ABC, abstractmethod
-from project.card.card_repository import CardRepository
+from exam_02apr.project.card.card_repository import CardRepository
 
 
 class Player(ABC):
