@@ -1,3 +1,4 @@
+from abc import ABC, abstractmethod
 from exam_16aug.project.software.software import Software
 
 
@@ -5,10 +6,11 @@ class UnsuccessfulInstallException(Exception):
     pass
 
 
-class Hardware:
-    def __init__(self, name, type_h, capacity, memory):
+class Hardware(ABC):
+    @abstractmethod
+    def __init__(self, name, type, capacity, memory):
         self.name = name
-        self.type_h = type_h
+        self.type = type
         self.capacity = capacity
         self.memory = memory
         self.software_components = []
@@ -22,3 +24,4 @@ class Hardware:
     def uninstall(self, software: Software):
         if software in self.software_components:
             self.software_components.remove(software)
+

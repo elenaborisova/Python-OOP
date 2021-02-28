@@ -82,18 +82,19 @@ class System:
         result = ''
 
         for hardware in System._hardware:
-            express_software_comps_count = len([comp for comp in hardware.software_components if comp.type_s == "Express"])
-            light_software_comps_count = len([comp for comp in hardware.software_components if comp.type_s == "Light"])
+            express_software_comps_count = len([comp for comp in hardware.software_components if comp.type == 'Express'])
+            light_software_comps_count = len([comp for comp in hardware.software_components if comp.type == 'Light'])
             total_memory_used = sum([comp.memory_consumption for comp in hardware.software_components])
             total_capacity_used = sum([comp.capacity_consumption for comp in hardware.software_components])
-            software_components = ', '.join([comp.name for comp in hardware.software_components]) if hardware.software_components else 'None'
+            software_components = ', '.join([comp.name for comp in hardware.software_components]) \
+                if hardware.software_components else 'None'
 
             result += f'Hardware Component - {hardware.name}\n' \
                       f'Express Software Components: {express_software_comps_count}\n' \
                       f'Light Software Components: {light_software_comps_count}\n' \
                       f'Memory Usage: {int(total_memory_used)} / {int(hardware.memory)}\n' \
                       f'Capacity Usage: {int(total_capacity_used)} / {int(hardware.capacity)}\n' \
-                      f'Type: {hardware.type_h}\n' \
-                      f'Software Components: {software_components}\n'
+                      f'Type: {hardware.type}\n' \
+                      f'Software Components: {software_components}'
 
         return result
