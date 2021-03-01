@@ -107,48 +107,49 @@ Software Components: {names of all software components separated by ', '} (or 'N
 
 In the test_hardware.py file create tests for the Hardware class.
 
-
+               
 *Examples*
 
 Test code:  
-        System.register_power_hardware("HDD", 200, 200)
-        System.register_heavy_hardware("SSD", 400, 400)
-        print(System.analyze())
-        System.register_light_software("HDD", "Test", 0, 10)
-        print(System.register_express_software("HDD", "Test2", 100, 100))
-        System.register_express_software("HDD", "Test3", 50, 100)
-        System.register_light_software("SSD", "Windows", 20, 50)
-        System.register_express_software("SSD", "Linux", 50, 100)
-        System.register_light_software("SSD", "Unix", 20, 50)
-        print(System.analyze())
-        System.release_software_component("SSD", "Linux")
-        print(System.system_split())
+    
+        System.register_power_hardware("HDD", 200, 200)  
+        System.register_heavy_hardware("SSD", 400, 400)  
+        print(System.analyze())  
+        System.register_light_software("HDD", "Test", 0, 10)  
+        print(System.register_express_software("HDD", "Test2", 100, 100))  
+        System.register_express_software("HDD", "Test3", 50, 100)  
+        System.register_light_software("SSD", "Windows", 20, 50)  
+        System.register_express_software("SSD", "Linux", 50, 100)  
+        System.register_light_software("SSD", "Unix", 20, 50)  
+        print(System.analyze())  
+        System.release_software_component("SSD", "Linux")  
+        print(System.system_split())  
         
 Output:  
-        System Analysis
-        Hardware Components: 2
-        Software Components: 0
-        Total Operational Memory: 0 / 650
-        Total Capacity Taken: 0 / 850
-        Software cannot be installed
-        System Analysis
-        Hardware Components: 2
-        Software Components: 5
-        Total Operational Memory: 455 / 650
-        Total Capacity Taken: 160 / 850
-        Hardware Component - HDD
-        Express Software Components: 1
-        Light Software Components: 1
-        Memory Usage: 205 / 350
-        Capacity Usage: 50 / 50
-        Type: Power
-        Software Components: Test, Test3Hardware Component - SSD
-        Express Software Components: 0
-        Light Software Components: 2
-        Memory Usage: 50 / 300
-        Capacity Usage: 60 / 800
-        Type: Heavy
-        Software Components: Windows, Unix
+        System Analysis  
+        Hardware Components: 2  
+        Software Components: 0  
+        Total Operational Memory: 0 / 650  
+        Total Capacity Taken: 0 / 850  
+        Software cannot be installed  
+        System Analysis  
+        Hardware Components: 2  
+        Software Components: 5  
+        Total Operational Memory: 455 / 650  
+        Total Capacity Taken: 160 / 850  
+        Hardware Component - HDD  
+        Express Software Components: 1  
+        Light Software Components: 1  
+        Memory Usage: 205 / 350  
+        Capacity Usage: 50 / 50  
+        Type: Power  
+        Software Components: Test, Test3Hardware Component - SSD  
+        Express Software Components: 0  
+        Light Software Components: 2  
+        Memory Usage: 50 / 300  
+        Capacity Usage: 60 / 800  
+        Type: Heavy  
+        Software Components: Windows, Unix  
 
 
 
