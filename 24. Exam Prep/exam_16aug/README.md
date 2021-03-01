@@ -1,4 +1,4 @@
-##Python OOP Exam 16 August 2020 – System Split
+## Python OOP Exam 16 August 2020 – System Split
 
 *You have been given the task to gather statistics about The System. The System is a network of components, connected to build something which functions logically, but you don’t need to know that. You need to build a program which processes statistics about The System.*
 
@@ -110,7 +110,7 @@ In the test_hardware.py file create tests for the Hardware class.
 
 *Examples*
 
-Test code:
+Test code:  
         System.register_power_hardware("HDD", 200, 200)
         System.register_heavy_hardware("SSD", 400, 400)
         print(System.analyze())
@@ -124,7 +124,7 @@ Test code:
         System.release_software_component("SSD", "Linux")
         print(System.system_split())
         
-Output:
+Output:  
         System Analysis
         Hardware Components: 2
         Software Components: 0
